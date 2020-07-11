@@ -8,7 +8,8 @@ import random
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:s14a-key@localhost:5432/usersdb'
+#app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:s14a-key@localhost:5432/usersdb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://ukhkvdafgrbsqy:8bdd96c3ab8b6d0e271bdfbff1986899910722e179a916ed83f5d48307ef64dc@ec2-54-152-175-141.compute-1.amazonaws.com:5432/dfe46f1k3kjv99'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = "s14a-key"
 Db.init_app(app)
