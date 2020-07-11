@@ -1,0 +1,30 @@
+{% extends "base_template.html" %}
+{% block title %}Add User{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<div class="container">
+
+
+  <div class="card mx-auto align-items-center centered" style="width: 18rem;">
+    <div class="card-img-top">
+      <br>
+      <i class="fa fa-user-circle fa-5x" aria-hidden="true"></i>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ first_name }}</h5>
+      <p class="card-text">{{ age }}</p>
+      <a href="/" class="btn btn-primary">Go Back</a>
+    </div>
+  </div>
+  
+
+</div>
+
+{% endblock %}

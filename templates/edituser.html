@@ -1,0 +1,48 @@
+{% extends "base_template.html" %}
+{% block title %}Add Random Users{% endblock %}
+{% block head %}
+  {{ super() }}
+{% endblock %}
+
+{% block content %}
+
+<br>
+<br>
+<br>
+<div class="container">
+  <div class="row justify-content-center">
+    <h1>Edit User</h1>
+  </div>
+  <div class="row justify-content-center">
+
+    <form class="edit-user-form" method="POST" action="/edituser">
+        {{ form.csrf_token() }}
+        {{ form.user_id(value=current_user_id) }}
+        <div class="edit-user-form-group form-group">
+            {{ form.first_name.label }}:
+            {{ form.first_name(class_='form-control', value=current_fname) }}
+            {% if form.first_name.errors %}
+                {% for error in form.first_name.errors %}
+                    <p class="edit-user-error-message">{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="edit-user-form-group form-group">
+            {{ form.age.label }}:
+            {{ form.age(class_='form-control', value=current_age) }}
+            {% if form.age.errors %}
+                {% for error in form.age.errors %}
+                    <p class="edit-user-error-message">{{ error }}</p>
+                {% endfor %}
+            {% endif %}
+        </div>
+        <div class="edit-user-form-submit">
+            <a role="button" class="btn btn-secondary mr-1 mb-1" href="/">Cancel</a>
+            {{ form.submit(class_="btn btn-warning mr-1 mb-1") }}
+        </div>
+    </form>
+
+  </div>
+</div>
+
+{% endblock %}

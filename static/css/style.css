@@ -1,0 +1,23 @@
+.centered {
+	text-align:center;
+}
+
+
+.modal-header-warning {
+  background-color: #c82333;
+  color: white;
+}
+
+
+.modal-title {
+  font-weight: bold;
+}
+
+
+.modal-body {
+  font-size: 1.2em;
+}
+
+.modal-user {
+  font-weight: bold;
+}
