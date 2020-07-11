@@ -7,4 +7,4 @@ class EditUserForm(FlaskForm):
     user_id = HiddenField("User Id")
     first_name = StringField('First Name', validators=[DataRequired()])
     age = IntegerField('Age', validators=[validators.NumberRange(min=0, max=130)])
-    submit = SubmitField('Edit')
+    submit = SubmitField('Save')
